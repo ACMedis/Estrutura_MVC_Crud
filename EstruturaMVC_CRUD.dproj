@@ -112,7 +112,7 @@
         <DCCReference Include="src\infrastructure\connection\impl\uConnectionFactoryImpl.pas"/>
         <DCCReference Include="src\infrastructure\query\uQueryFactory.pas"/>
         <DCCReference Include="src\infrastructure\query\impl\uQueryFactoryImpl.pas"/>
-        <DCCReference Include="src\infrastructure\entity\uCidadeEntity.pas"/>
+        <DCCReference Include="src\dto\uCidadeDTO.pas"/>
         <DCCReference Include="src\service\uCidadeService.pas"/>
         <DCCReference Include="src\infrastructure\dao\uCidadeDAO.pas"/>
         <DCCReference Include="src\infrastructure\dao\uCrudDAO.pas"/>

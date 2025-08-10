@@ -3,14 +3,15 @@ unit uCidadeService;
 interface
 
 uses
-  Data.DB, uCidadeEntity;
+  Data.DB,
+  uCidadeDTO;
 
 type
 
   iCidadeService = interface
     ['{8380DA0C-7F0B-4C21-B4B5-A768DFA27461}']
     function FindAll: TDataSet;
-    function findById(aID: Variant): iCidadeEntity;
+    function findById(aID: Variant): iCidadeDTO;
   end;
 
 implementation

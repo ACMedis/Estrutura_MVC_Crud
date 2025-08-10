@@ -7,7 +7,7 @@ uses
   Datasnap.DBClient,
   uCidadeController,
   uCidadeService,
-  uCidadeEntity;
+  uCidadeDTO;
 
 
 type
@@ -23,7 +23,7 @@ type
 
       function FindAll: iCidadeController;
       function DataSet: TDataSet;
-      function findById(aID: Variant): iCidadeEntity;
+      function findById(aID: Variant): iCidadeDTO;
   end;
 
 
@@ -78,7 +78,7 @@ begin
 
 end;
 
-function TCidadeControllerImpl.findById(aID: Variant): iCidadeEntity;
+function TCidadeControllerImpl.findById(aID: Variant): iCidadeDTO;
 begin
   Result := FCidadeService.findById(aID);
 end;

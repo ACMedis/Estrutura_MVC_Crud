@@ -6,7 +6,7 @@ uses
   Data.DB,
   uCidadeService,
   uCidadeDao,
-  uCidadeEntity;
+  uCidadeDTO;
 
 
 type
@@ -20,7 +20,7 @@ type
       class function New: iCidadeService;
 
       function FindAll: TDataSet;
-      function findById(aID: Variant): iCidadeEntity;
+      function findById(aID: Variant): iCidadeDTO;
   end;
 
 
@@ -47,7 +47,7 @@ begin
   Result := FDao.findAll;
 end;
 
-function TCidadeServiceImpl.findById(aID: Variant): iCidadeEntity;
+function TCidadeServiceImpl.findById(aID: Variant): iCidadeDTO;
 begin
   Result := FDao.findById(aID);
 end;

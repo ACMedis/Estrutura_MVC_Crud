@@ -32,7 +32,8 @@ var
 implementation
 
 uses
-  uControllerFactoryImpl, uCidadeEntity;
+  uControllerFactoryImpl,
+  uCidadeDTO;
 
 {$R *.dfm}
 
@@ -43,7 +44,7 @@ end;
 
 procedure TFrmCidades.DBGrid1CellClick(Column: TColumn);
 var
-  vEntity: iCidadeEntity;
+  vEntity: iCidadeDTO;
 begin
   vEntity := FCidadeController.findById(dsCidades.DataSet.FieldByName('id').AsInteger);
   edtID.Text := vEntity.Id.ToString;

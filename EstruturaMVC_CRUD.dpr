@@ -11,7 +11,7 @@ uses
   uConnectionFactoryImpl in 'src\infrastructure\connection\impl\uConnectionFactoryImpl.pas',
   uQueryFactory in 'src\infrastructure\query\uQueryFactory.pas',
   uQueryFactoryImpl in 'src\infrastructure\query\impl\uQueryFactoryImpl.pas',
-  uCidadeEntity in 'src\infrastructure\entity\uCidadeEntity.pas',
+  uCidadeDTO in 'src\dto\uCidadeDTO.pas',
   uCidadeService in 'src\service\uCidadeService.pas',
   uCidadeDAO in 'src\infrastructure\dao\uCidadeDAO.pas',
   uCrudDAO in 'src\infrastructure\dao\uCrudDAO.pas',

@@ -6,7 +6,7 @@ uses
   Data.DB,
   uCidadeDao,
   uCrudDao,
-  uCidadeEntity,
+  uCidadeDTO,
   uQuery;
 
 type
@@ -18,11 +18,11 @@ type
       destructor Destroy;override;
       class function New: iCidadeDao;
 
-    function Delete(aValue: Integer): iCrudDao<iCidadeEntity>;
+    function Delete(aValue: Integer): iCrudDao<iCidadeDTO>;
     function findAll: TDataSet;
-    function findById(aID: Variant): iCidadeEntity;
-    function Insert(aValue: iCidadeEntity): iCrudDao<iCidadeEntity>;
-    function Update(aValue: iCidadeEntity): iCrudDao<iCidadeEntity>;
+    function findById(aID: Variant): iCidadeDTO;
+    function Insert(aValue: iCidadeDTO): iCrudDao<iCidadeDTO>;
+    function Update(aValue: iCidadeDTO): iCrudDao<iCidadeDTO>;
     function findCidadesByUF(aUF: String): TDataSet;
 
   end;
@@ -43,7 +43,7 @@ begin
   FQuery := TQueryFactoryImpl.New.GetQuery;
 end;
 
-function TCidadeDaoImpl.Delete(aValue: Integer): iCrudDao<iCidadeEntity>;
+function TCidadeDaoImpl.Delete(aValue: Integer): iCrudDao<iCidadeDTO>;
 begin
   Result := iCidadeDao(Self);
 end;
@@ -63,7 +63,7 @@ begin
               .DataSet;
 end;
 
-function TCidadeDaoImpl.findById(aID: Variant): iCidadeEntity;
+function TCidadeDaoImpl.findById(aID: Variant): iCidadeDTO;
 var
   vDataSet: TDataSet;
 begin
@@ -74,7 +74,7 @@ begin
                 .Open
                 .DataSet;
 
-  Result := TCidadeEntity
+  Result := TCidadeDTO
               .New
               .Id(vDataSet.FieldByName('Id').AsInteger)
               .Nome(vDataSet.FieldByName('Nome').AsString)
@@ -85,10 +85,10 @@ end;
 
 function TCidadeDaoImpl.findCidadesByUF(aUF: String): TDataSet;
 begin
-
+  Result := nil;
 end;
 
-function TCidadeDaoImpl.Insert(aValue: iCidadeEntity): iCrudDao<iCidadeEntity>;
+function TCidadeDaoImpl.Insert(aValue: iCidadeDTO): iCrudDao<iCidadeDTO>;
 begin
   Result := iCidadeDao(Self);
 end;
@@ -98,7 +98,7 @@ begin
   Result := Self.Create;
 end;
 
-function TCidadeDaoImpl.Update(aValue: iCidadeEntity): iCrudDao<iCidadeEntity>;
+function TCidadeDaoImpl.Update(aValue: iCidadeDTO): iCrudDao<iCidadeDTO>;
 begin
   Result := iCidadeDao(Self);
 end;
