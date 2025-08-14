@@ -130,6 +130,18 @@
             <Form>FrmCidades</Form>
             <FormType>dfm</FormType>
         </DCCReference>
+        <DCCReference Include="src\dto\uClienteDTO.pas"/>
+        <DCCReference Include="src\comum\uEnums.pas"/>
+        <DCCReference Include="src\infrastructure\dao\uClienteDAO.pas"/>
+        <DCCReference Include="src\infrastructure\dao\impl\uClienteDAOImpl.pas"/>
+        <DCCReference Include="src\view\uFrmCliente.pas">
+            <Form>FrmCliente</Form>
+            <FormType>dfm</FormType>
+        </DCCReference>
+        <DCCReference Include="src\service\uClienteService.pas"/>
+        <DCCReference Include="src\service\impl\uClienteServiceImpl.pas"/>
+        <DCCReference Include="src\controller\uClienteController.pas"/>
+        <DCCReference Include="src\controller\impl\uClienteControllerImpl.pas"/>
         <BuildConfiguration Include="Release">
             <Key>Cfg_2</Key>
             <CfgParent>Base</CfgParent>

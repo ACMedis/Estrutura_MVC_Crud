@@ -3,7 +3,9 @@ unit uServiceFactoryImpl;
 interface
 
 uses
-  uServiceFactory, uCidadeService;
+  uServiceFactory,
+  uCidadeService,
+  uClienteService;
 
 
 type
@@ -17,13 +19,15 @@ type
       class function New: iServiceFactory;
 
       function GetCidadeService: iCidadeService;
+      function GetClienteService: iClienteService;
   end;
 
 
 implementation
 
 uses
-  uCidadeServiceImpl;
+  uCidadeServiceImpl,
+  uClienteServiceImpl;
 
 { TServiceFactoryImpl }
 
@@ -41,6 +45,11 @@ end;
 function TServiceFactoryImpl.GetCidadeService: iCidadeService;
 begin
   Result := TCidadeServiceImpl.New;
+end;
+
+function TServiceFactoryImpl.GetClienteService: iClienteService;
+begin
+  Result := TClienteServiceImpl.New;
 end;
 
 class function TServiceFactoryImpl.New: iServiceFactory;

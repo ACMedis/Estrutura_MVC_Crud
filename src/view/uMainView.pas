@@ -9,17 +9,13 @@ uses
 
 type
   TForm1 = class(TForm)
-    DBGrid1: TDBGrid;
-    DataSource1: TDataSource;
-    Edit1: TEdit;
     btnListarCidades: TButton;
-    Edit2: TEdit;
-    Edit3: TEdit;
-    Edit4: TEdit;
-    btnCadastrarCidade: TButton;
-    Button3: TButton;
+    btnSair: TButton;
+    btnCliente: TButton;
     procedure FormCreate(Sender: TObject);
     procedure btnListarCidadesClick(Sender: TObject);
+    procedure btnSairClick(Sender: TObject);
+    procedure btnClienteClick(Sender: TObject);
   private
 
   public
@@ -32,9 +28,19 @@ var
 implementation
 
 uses
-  uFrmCidade;
+  uFrmCidade, uFrmCliente;
 
 {$R *.dfm}
+
+procedure TForm1.btnClienteClick(Sender: TObject);
+begin
+  try
+    FrmCliente := TFrmCliente.Create(self);
+    FrmCliente.ShowModal;
+  finally
+    FrmCliente.DisposeOf;
+  end;
+end;
 
 procedure TForm1.btnListarCidadesClick(Sender: TObject);
 begin
@@ -44,6 +50,11 @@ begin
   finally
     FrmCidades.DisposeOf;
   end;
+end;
+
+procedure TForm1.btnSairClick(Sender: TObject);
+begin
+  Application.Terminate;
 end;
 
 procedure TForm1.FormCreate(Sender: TObject);

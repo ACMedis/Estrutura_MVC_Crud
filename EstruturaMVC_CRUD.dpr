@@ -25,7 +25,16 @@ uses
   uDaoFactoryImpl in 'src\infrastructure\dao\impl\uDaoFactoryImpl.pas',
   uServiceFactory in 'src\service\uServiceFactory.pas',
   uServiceFactoryImpl in 'src\service\impl\uServiceFactoryImpl.pas',
-  uFrmCidade in 'src\view\uFrmCidade.pas' {FrmCidades};
+  uFrmCidade in 'src\view\uFrmCidade.pas' {FrmCidades},
+  uClienteDTO in 'src\dto\uClienteDTO.pas',
+  uEnums in 'src\comum\uEnums.pas',
+  uClienteDAO in 'src\infrastructure\dao\uClienteDAO.pas',
+  uClienteDAOImpl in 'src\infrastructure\dao\impl\uClienteDAOImpl.pas',
+  uFrmCliente in 'src\view\uFrmCliente.pas' {FrmCliente},
+  uClienteService in 'src\service\uClienteService.pas',
+  uClienteServiceImpl in 'src\service\impl\uClienteServiceImpl.pas',
+  uClienteController in 'src\controller\uClienteController.pas',
+  uClienteControllerImpl in 'src\controller\impl\uClienteControllerImpl.pas';
 
 {$R *.res}
 

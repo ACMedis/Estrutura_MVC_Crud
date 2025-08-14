@@ -16,77 +16,31 @@ object Form1: TForm1
   OnCreate = FormCreate
   PixelsPerInch = 96
   TextHeight = 13
-  object DBGrid1: TDBGrid
-    Left = 12
-    Top = 9
-    Width = 815
-    Height = 192
-    TabOrder = 0
-    TitleFont.Charset = DEFAULT_CHARSET
-    TitleFont.Color = clWindowText
-    TitleFont.Height = -11
-    TitleFont.Name = 'Tahoma'
-    TitleFont.Style = []
-  end
-  object Edit1: TEdit
-    Left = 12
-    Top = 291
-    Width = 85
-    Height = 21
-    TabOrder = 1
-    Text = 'Edit1'
-  end
   object btnListarCidades: TButton
     Left = 8
-    Top = 207
+    Top = 8
     Width = 145
     Height = 34
     Caption = 'Listar Cidades'
-    TabOrder = 2
+    TabOrder = 0
     OnClick = btnListarCidadesClick
   end
-  object Edit2: TEdit
-    Left = 103
-    Top = 291
-    Width = 362
-    Height = 21
-    TabOrder = 3
-    Text = 'Edit1'
-  end
-  object Edit3: TEdit
-    Left = 484
-    Top = 291
-    Width = 85
-    Height = 21
-    TabOrder = 4
-    Text = 'Edit1'
-  end
-  object Edit4: TEdit
-    Left = 588
-    Top = 291
-    Width = 85
-    Height = 21
-    TabOrder = 5
-    Text = 'Edit1'
-  end
-  object btnCadastrarCidade: TButton
-    Left = 8
-    Top = 335
-    Width = 145
-    Height = 34
-    Caption = 'Cadatrar Cidade'
-    TabOrder = 6
-  end
-  object Button3: TButton
+  object btnSair: TButton
     Left = 682
     Top = 428
     Width = 145
     Height = 34
     Caption = 'Button1'
-    TabOrder = 7
+    TabOrder = 1
+    OnClick = btnSairClick
   end
-  object DataSource1: TDataSource
-    Left = 648
-    Top = 96
+  object btnCliente: TButton
+    Left = 8
+    Top = 48
+    Width = 145
+    Height = 34
+    Caption = 'Listar Clientes'
+    TabOrder = 2
+    OnClick = btnClienteClick
   end
 end

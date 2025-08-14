@@ -4,7 +4,8 @@ interface
 
 uses
   uControllerFactory,
-  uCidadeController;
+  uCidadeController,
+  uClienteController;
 
 
 type
@@ -17,13 +18,15 @@ type
       destructor Destroy;override;
       class function New: iControllerFactory;
       function GetCidadeController: iCidadeController;
+      function GetClienteController: iClienteController;
   end;
 
 
 implementation
 
 uses
-  uCidadeControllerImpl;
+  uCidadeControllerImpl,
+  uClienteControllerImpl;
 
 { TControllerFactoryImpl }
 
@@ -41,6 +44,11 @@ end;
 function TControllerFactoryImpl.GetCidadeController: iCidadeController;
 begin
   Result := TCidadeControllerImpl.New;
+end;
+
+function TControllerFactoryImpl.GetClienteController: iClienteController;
+begin
+  Result := TClienteControllerImpl.New;
 end;
 
 class function TControllerFactoryImpl.New: iControllerFactory;

@@ -4,7 +4,7 @@ interface
 
 uses
   uDaoFactory,
-  uCidadeDao;
+  uCidadeDao, uClienteDAO;
 
 
 type
@@ -17,13 +17,15 @@ type
       destructor Destroy;override;
       class function New: iDaoFactory;
       function GetCidadeDao: iCidadeDao;
+      function GetClienteDao: iClienteDao;
   end;
 
 
 implementation
 
 uses
-  uCidadeDaoImpl;
+  uCidadeDaoImpl,
+  uClienteDAOImpl;
 
 { TDaoFactoryImpl }
 
@@ -41,6 +43,11 @@ end;
 function TDaoFactoryImpl.GetCidadeDao: iCidadeDao;
 begin
   Result := TCidadeDaoImpl.New;
+end;
+
+function TDaoFactoryImpl.GetClienteDao: iClienteDao;
+begin
+  Result := TClienteDaoImpl.New;
 end;
 
 class function TDaoFactoryImpl.New: iDaoFactory;

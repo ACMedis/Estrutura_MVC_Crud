@@ -17,6 +17,7 @@ type
     function Update(aValue: T): iCrudDao<T>;
   end;
 
+
 implementation
 
 end.
