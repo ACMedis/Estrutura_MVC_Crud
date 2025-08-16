@@ -4,7 +4,7 @@ object FrmCidades: TFrmCidades
   Caption = 'FrmCidades'
   ClientHeight = 428
   ClientWidth = 697
-  Color = clBtnFace
+  Color = clSilver
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
   Font.Height = -11
@@ -93,28 +93,56 @@ object FrmCidades: TFrmCidades
     Left = 12
     Top = 291
     Width = 85
-    Height = 21
+    Height = 25
+    BorderStyle = bsNone
+    Font.Charset = ANSI_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -13
+    Font.Name = 'Segoe UI'
+    Font.Style = []
+    ParentFont = False
     TabOrder = 2
   end
   object edtNome: TEdit
     Left = 103
     Top = 291
     Width = 362
-    Height = 21
+    Height = 25
+    BorderStyle = bsNone
+    Font.Charset = ANSI_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -13
+    Font.Name = 'Segoe UI'
+    Font.Style = []
+    ParentFont = False
     TabOrder = 3
   end
   object edtEstado: TEdit
     Left = 484
     Top = 291
     Width = 85
-    Height = 21
+    Height = 25
+    BorderStyle = bsNone
+    Font.Charset = ANSI_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -13
+    Font.Name = 'Segoe UI'
+    Font.Style = []
+    ParentFont = False
     TabOrder = 4
   end
   object edtDDD: TEdit
     Left = 588
     Top = 291
     Width = 85
-    Height = 21
+    Height = 25
+    BorderStyle = bsNone
+    Font.Charset = ANSI_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -13
+    Font.Name = 'Segoe UI'
+    Font.Style = []
+    ParentFont = False
     TabOrder = 5
   end
   object btnCadastrarCidade: TButton
@@ -124,6 +152,24 @@ object FrmCidades: TFrmCidades
     Height = 34
     Caption = 'Cadatrar Cidade'
     TabOrder = 6
+  end
+  inline FramePesquisa1: TFramePesquisa
+    Left = 8
+    Top = 378
+    Width = 518
+    Height = 42
+    TabOrder = 7
+    ExplicitLeft = 8
+    ExplicitTop = 378
+  end
+  object Button1: TButton
+    Left = 544
+    Top = 206
+    Width = 129
+    Height = 33
+    Caption = 'Confirmar'
+    TabOrder = 8
+    OnClick = Button1Click
   end
   object dsCidades: TDataSource
     Left = 520

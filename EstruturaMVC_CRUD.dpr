@@ -34,7 +34,10 @@ uses
   uClienteService in 'src\service\uClienteService.pas',
   uClienteServiceImpl in 'src\service\impl\uClienteServiceImpl.pas',
   uClienteController in 'src\controller\uClienteController.pas',
-  uClienteControllerImpl in 'src\controller\impl\uClienteControllerImpl.pas';
+  uClienteControllerImpl in 'src\controller\impl\uClienteControllerImpl.pas',
+  uFrameCidade in 'src\view\frame\uFrameCidade.pas' {FramePesquisa: TFrame},
+  uFramePesquisaController in 'src\controller\uFramePesquisaController.pas',
+  uFramePesquisaControllerImpl in 'src\controller\impl\uFramePesquisaControllerImpl.pas';
 
 {$R *.res}
 

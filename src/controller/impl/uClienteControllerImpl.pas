@@ -6,7 +6,8 @@ uses
   uClienteController,
   uClienteDTO,
   uClienteService,
-  Datasnap.DBClient, Data.DB;
+  Datasnap.DBClient,
+  Data.DB;
 
 
 type
@@ -15,6 +16,7 @@ type
     private
       FClienteService: iClienteService;
       FDataSet : TClientDataSet;
+
     public
       constructor Create;
       destructor Destroy;override;
@@ -42,6 +44,7 @@ begin
   FDataSet.FieldDefs.Add('Documento', ftString, 30, False);
   FDataSet.FieldDefs.Add('Cidade', ftString, 200, False);
   FDataSet.CreateDataSet;
+
 end;
 
 destructor TClienteControllerImpl.Destroy;

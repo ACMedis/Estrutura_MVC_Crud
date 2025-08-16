@@ -142,6 +142,13 @@
         <DCCReference Include="src\service\impl\uClienteServiceImpl.pas"/>
         <DCCReference Include="src\controller\uClienteController.pas"/>
         <DCCReference Include="src\controller\impl\uClienteControllerImpl.pas"/>
+        <DCCReference Include="src\view\frame\uFrameCidade.pas">
+            <Form>FramePesquisa</Form>
+            <FormType>dfm</FormType>
+            <DesignClass>TFrame</DesignClass>
+        </DCCReference>
+        <DCCReference Include="src\controller\uFramePesquisaController.pas"/>
+        <DCCReference Include="src\controller\impl\uFramePesquisaControllerImpl.pas"/>
         <BuildConfiguration Include="Release">
             <Key>Cfg_2</Key>
             <CfgParent>Base</CfgParent>

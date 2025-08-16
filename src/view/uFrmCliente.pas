@@ -5,7 +5,8 @@ interface
 uses
   Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
   Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.StdCtrls, Data.DB, Vcl.Grids,
-  Vcl.DBGrids, uClienteController;
+  Vcl.DBGrids, uClienteController, uFrameCidade, uFramePesquisaController,
+  uCidadeDTO, uFrmCidade;
 
 type
   TFrmCliente = class(TForm)
@@ -21,11 +22,16 @@ type
     DBGrid1: TDBGrid;
     Button1: TButton;
     dsCliente: TDataSource;
+    FrameCidades: TFramePesquisa;
     procedure Button1Click(Sender: TObject);
     procedure FormCreate(Sender: TObject);
     procedure btnListarCidadesClick(Sender: TObject);
+    procedure FormDestroy(Sender: TObject);
   private
     FClienteController: iClienteController;
+    FFrameCidadesController: iFramePesquisaController<iCidadeDTO>;
+    FFormPesquisaCidade: TFrmCidades;
+    procedure AbrirFormPesquisaCidade(Sender: TObject);
   public
     { Public declarations }
   end;
@@ -38,9 +44,19 @@ implementation
 uses
   uClienteDTO,
   uControllerFactoryImpl,
-  uCidadeDTO;
+  uFramePesquisaControllerImpl;
 
 {$R *.dfm}
+
+procedure TFrmCliente.AbrirFormPesquisaCidade(Sender: TObject);
+begin
+//  try
+//    FrmCidades := TFrmCidades.Create(self);
+//    FrmCidades.ShowModal;
+//  finally
+//    FrmCidades.DisposeOf;
+//  end;
+end;
 
 procedure TFrmCliente.btnListarCidadesClick(Sender: TObject);
 begin
@@ -74,6 +90,18 @@ end;
 procedure TFrmCliente.FormCreate(Sender: TObject);
 begin
   FClienteController := TControllerFactoryImpl.New.GetClienteController;
+  FFormPesquisaCidade := TFrmCidades.Create(self);
+
+  FFrameCidadesController := TFramePesquisaControllerImpl<iCidadeDTO>
+    .New
+    .SetFormPesquisa(FFormPesquisaCidade);
+
+  FrameCidades.SetController(FFrameCidadesController);
+end;
+
+procedure TFrmCliente.FormDestroy(Sender: TObject);
+begin
+  FFormPesquisaCidade.DisposeOf;
 end;
 
 end.

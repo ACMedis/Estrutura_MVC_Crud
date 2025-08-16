@@ -2,7 +2,7 @@ object FrmCliente: TFrmCliente
   Left = 0
   Top = 0
   Caption = 'FrmCliente'
-  ClientHeight = 379
+  ClientHeight = 410
   ClientWidth = 671
   Color = clBtnFace
   Font.Charset = ANSI_CHARSET
@@ -13,6 +13,7 @@ object FrmCliente: TFrmCliente
   OldCreateOrder = False
   Position = poScreenCenter
   OnCreate = FormCreate
+  OnDestroy = FormDestroy
   PixelsPerInch = 96
   TextHeight = 20
   object Label1: TLabel
@@ -168,6 +169,15 @@ object FrmCliente: TFrmCliente
     Caption = 'Gravar'
     TabOrder = 6
     OnClick = Button1Click
+  end
+  inline FrameCidades: TFramePesquisa
+    Left = 16
+    Top = 360
+    Width = 518
+    Height = 42
+    TabOrder = 7
+    ExplicitLeft = 16
+    ExplicitTop = 360
   end
   object dsCliente: TDataSource
     Left = 520
