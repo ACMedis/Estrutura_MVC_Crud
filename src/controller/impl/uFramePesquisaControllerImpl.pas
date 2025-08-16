@@ -11,7 +11,6 @@ type
 
   TFramePesquisaControllerImpl<T> = class(TInterfacedObject, iFramePesquisaController<T>)
     private
-     FEventOnClickSearch: TProc<TObject>;
      FFormPesquisa: TForm;
     public
       constructor Create;

@@ -31,7 +31,6 @@ type
     FClienteController: iClienteController;
     FFrameCidadesController: iFramePesquisaController<iCidadeDTO>;
     FFormPesquisaCidade: TFrmCidades;
-    procedure AbrirFormPesquisaCidade(Sender: TObject);
   public
     { Public declarations }
   end;
@@ -48,15 +47,6 @@ uses
 
 {$R *.dfm}
 
-procedure TFrmCliente.AbrirFormPesquisaCidade(Sender: TObject);
-begin
-//  try
-//    FrmCidades := TFrmCidades.Create(self);
-//    FrmCidades.ShowModal;
-//  finally
-//    FrmCidades.DisposeOf;
-//  end;
-end;
 
 procedure TFrmCliente.btnListarCidadesClick(Sender: TObject);
 begin
