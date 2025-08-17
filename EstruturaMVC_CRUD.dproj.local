@@ -86,12 +86,18 @@
     <Transaction>2025/08/13 19:21:54.000.633,D:\workspace-acm\Delphi\ExemploMVC_CRUD\src\controller\uClienteController.pas=D:\workspace-acm\Delphi\ExemploMVC_CRUD\Unit1.pas</Transaction>
     <Transaction>2025/08/13 19:21:58.000.648,=D:\workspace-acm\Delphi\ExemploMVC_CRUD\Unit1.pas</Transaction>
     <Transaction>2025/08/13 19:23:08.000.822,D:\workspace-acm\Delphi\ExemploMVC_CRUD\src\controller\impl\uClienteControllerImpl.pas=D:\workspace-acm\Delphi\ExemploMVC_CRUD\Unit1.pas</Transaction>
-    <Transaction>2025/08/15 18:53:57.091,=D:\workspace-acm\Delphi\ExemploMVC_CRUD\Unit1.pas</Transaction>
-    <Transaction>2025/08/15 19:05:09.596,D:\workspace-acm\Delphi\ExemploMVC_CRUD\src\view\frame\uFrameCidade.pas=D:\workspace-acm\Delphi\ExemploMVC_CRUD\Unit1.pas</Transaction>
-    <Transaction>2025/08/15 19:05:09.596,D:\workspace-acm\Delphi\ExemploMVC_CRUD\src\view\frame\uFrameCidade.dfm=D:\workspace-acm\Delphi\ExemploMVC_CRUD\Unit1.dfm</Transaction>
-    <Transaction>2025/08/15 19:13:08.739,=D:\workspace-acm\Delphi\ExemploMVC_CRUD\Unit1.pas</Transaction>
-    <Transaction>2025/08/15 19:13:49.450,D:\workspace-acm\Delphi\ExemploMVC_CRUD\src\controller\uFramePesquisaController.pas=D:\workspace-acm\Delphi\ExemploMVC_CRUD\Unit1.pas</Transaction>
-    <Transaction>2025/08/15 19:14:02.372,=D:\workspace-acm\Delphi\ExemploMVC_CRUD\Unit1.pas</Transaction>
-    <Transaction>2025/08/15 19:14:48.952,D:\workspace-acm\Delphi\ExemploMVC_CRUD\src\controller\impl\uFramePesquisaControllerImpl.pas=D:\workspace-acm\Delphi\ExemploMVC_CRUD\Unit1.pas</Transaction>
+    <Transaction>2025/08/15 18:53:57.000.091,=D:\workspace-acm\Delphi\ExemploMVC_CRUD\Unit1.pas</Transaction>
+    <Transaction>2025/08/15 19:05:09.000.596,D:\workspace-acm\Delphi\ExemploMVC_CRUD\src\view\frame\uFrameCidade.pas=D:\workspace-acm\Delphi\ExemploMVC_CRUD\Unit1.pas</Transaction>
+    <Transaction>2025/08/15 19:05:09.000.596,D:\workspace-acm\Delphi\ExemploMVC_CRUD\src\view\frame\uFrameCidade.dfm=D:\workspace-acm\Delphi\ExemploMVC_CRUD\Unit1.dfm</Transaction>
+    <Transaction>2025/08/15 19:13:08.000.739,=D:\workspace-acm\Delphi\ExemploMVC_CRUD\Unit1.pas</Transaction>
+    <Transaction>2025/08/15 19:13:49.000.450,D:\workspace-acm\Delphi\ExemploMVC_CRUD\src\controller\uFramePesquisaController.pas=D:\workspace-acm\Delphi\ExemploMVC_CRUD\Unit1.pas</Transaction>
+    <Transaction>2025/08/15 19:14:02.000.372,=D:\workspace-acm\Delphi\ExemploMVC_CRUD\Unit1.pas</Transaction>
+    <Transaction>2025/08/15 19:14:48.000.952,D:\workspace-acm\Delphi\ExemploMVC_CRUD\src\controller\impl\uFramePesquisaControllerImpl.pas=D:\workspace-acm\Delphi\ExemploMVC_CRUD\Unit1.pas</Transaction>
+    <Transaction>2025/08/16 14:07:44.000.650,D:\workspace-acm\Delphi\ExemploMVC_CRUD\src\view\frame\uFrameCidade.dfm=D:\workspace-acm\Delphi\ExemploMVC_CRUD\src\view\frame\uFramePesquisa.dfm</Transaction>
+    <Transaction>2025/08/16 14:07:44.000.650,D:\workspace-acm\Delphi\ExemploMVC_CRUD\src\view\frame\uFrameCidade.pas=D:\workspace-acm\Delphi\ExemploMVC_CRUD\src\view\frame\uFramePesquisa.pas</Transaction>
+    <Transaction>2025/08/16 14:45:50.000.507,=D:\workspace-acm\Delphi\ExemploMVC_CRUD\Unit1.pas</Transaction>
+    <Transaction>2025/08/17 09:43:09.138,=D:\workspace-acm\Delphi\ExemploMVC_CRUD\Unit1.pas</Transaction>
+    <Transaction>2025/08/17 09:47:41.002,D:\workspace-acm\Delphi\ExemploMVC_CRUD\src\controller\impl\uFramePesquisaCidadeControllerImpl.pas=D:\workspace-acm\Delphi\ExemploMVC_CRUD\Unit1.pas</Transaction>
+    <Transaction>2025/08/17 10:23:09.557,D:\workspace-acm\Delphi\ExemploMVC_CRUD\src\controller\impl\uFramePesquisaControllerImpl.pas=</Transaction>
   </Transactions>
 </BorlandProject>

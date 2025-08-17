@@ -5,7 +5,7 @@ interface
 uses
   Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
   Vcl.Controls, Vcl.Forms, Vcl.Dialogs, uCidadeController, Data.DB,
-  Vcl.StdCtrls, Vcl.Grids, Vcl.DBGrids, uFrameCidade;
+  Vcl.StdCtrls, Vcl.Grids, Vcl.DBGrids, uFramePesquisa, uCidadeDTO;
 
 type
   TFrmCidades = class(TForm)
@@ -18,16 +18,16 @@ type
     edtDDD: TEdit;
     btnCadastrarCidade: TButton;
     FramePesquisa1: TFramePesquisa;
-    Button1: TButton;
+    btnConfirmar: TButton;
     procedure FormCreate(Sender: TObject);
     procedure btnListarCidadesClick(Sender: TObject);
     procedure DBGrid1CellClick(Column: TColumn);
-    procedure Button1Click(Sender: TObject);
+    procedure btnConfirmarClick(Sender: TObject);
   private
     FCidadeController: iCidadeController;
-    FOnClickConfirmar: TProc<TObject>;
+    FEventoSelecionarItem: TProc<iCidadeDTO>;
   public
-    procedure SetOnClickConfirmar(aEvent: TProc<TObject>);
+    procedure SetEventSelecionarItem(aValue: TProc<iCidadeDTO>);
   end;
 
 var
@@ -36,8 +36,7 @@ var
 implementation
 
 uses
-  uControllerFactoryImpl,
-  uCidadeDTO, uFramePesquisaControllerImpl;
+  uControllerFactoryImpl;
 
 {$R *.dfm}
 
@@ -46,13 +45,13 @@ begin
   FCidadeController.FindAll;
 end;
 
-procedure TFrmCidades.Button1Click(Sender: TObject);
+procedure TFrmCidades.btnConfirmarClick(Sender: TObject);
 var
   vEntity: iCidadeDTO;
 begin
   vEntity := FCidadeController.findById(dsCidades.DataSet.FieldByName('id').AsInteger);
-  if Assigned(FOnClickConfirmar) then
-    FOnClickConfirmar(TObject(vEntity));
+  if Assigned(FEventoSelecionarItem) then
+    FEventoSelecionarItem(vEntity);
 end;
 
 procedure TFrmCidades.DBGrid1CellClick(Column: TColumn);
@@ -78,9 +77,9 @@ begin
 
 end;
 
-procedure TFrmCidades.SetOnClickConfirmar(aEvent: TProc<TObject>);
+procedure TFrmCidades.SetEventSelecionarItem(aValue: TProc<iCidadeDTO>);
 begin
-  FOnClickConfirmar := aEvent;
+  FEventoSelecionarItem := aValue;
 end;
 
 end.

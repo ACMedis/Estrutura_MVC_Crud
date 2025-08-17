@@ -162,14 +162,14 @@ object FrmCidades: TFrmCidades
     ExplicitLeft = 8
     ExplicitTop = 378
   end
-  object Button1: TButton
+  object btnConfirmar: TButton
     Left = 544
     Top = 206
     Width = 129
     Height = 33
     Caption = 'Confirmar'
     TabOrder = 8
-    OnClick = Button1Click
+    OnClick = btnConfirmarClick
   end
   object dsCidades: TDataSource
     Left = 520

@@ -179,6 +179,15 @@ object FrmCliente: TFrmCliente
     ExplicitLeft = 16
     ExplicitTop = 360
   end
+  object Button2: TButton
+    Left = 540
+    Top = 360
+    Width = 101
+    Height = 42
+    Caption = 'Button2'
+    TabOrder = 8
+    OnClick = Button2Click
+  end
   object dsCliente: TDataSource
     Left = 520
     Top = 72

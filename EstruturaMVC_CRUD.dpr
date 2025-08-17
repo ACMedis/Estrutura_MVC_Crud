@@ -35,9 +35,9 @@ uses
   uClienteServiceImpl in 'src\service\impl\uClienteServiceImpl.pas',
   uClienteController in 'src\controller\uClienteController.pas',
   uClienteControllerImpl in 'src\controller\impl\uClienteControllerImpl.pas',
-  uFrameCidade in 'src\view\frame\uFrameCidade.pas' {FramePesquisa: TFrame},
+  uFramePesquisa in 'src\view\frame\uFramePesquisa.pas' {FramePesquisa: TFrame},
   uFramePesquisaController in 'src\controller\uFramePesquisaController.pas',
-  uFramePesquisaControllerImpl in 'src\controller\impl\uFramePesquisaControllerImpl.pas';
+  uFramePesquisaCidadeControllerImpl in 'src\controller\impl\uFramePesquisaCidadeControllerImpl.pas';
 
 {$R *.res}
 

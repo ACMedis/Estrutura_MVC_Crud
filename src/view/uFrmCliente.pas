@@ -5,8 +5,12 @@ interface
 uses
   Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
   Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.StdCtrls, Data.DB, Vcl.Grids,
-  Vcl.DBGrids, uClienteController, uFrameCidade, uFramePesquisaController,
-  uCidadeDTO, uFrmCidade;
+  Vcl.DBGrids,
+  uClienteController,
+  uFramePesquisa,
+  uFramePesquisaController,
+  uCidadeDTO,
+  uFrmCidade;
 
 type
   TFrmCliente = class(TForm)
@@ -23,14 +27,16 @@ type
     Button1: TButton;
     dsCliente: TDataSource;
     FrameCidades: TFramePesquisa;
+    Button2: TButton;
     procedure Button1Click(Sender: TObject);
     procedure FormCreate(Sender: TObject);
     procedure btnListarCidadesClick(Sender: TObject);
     procedure FormDestroy(Sender: TObject);
+    procedure Button2Click(Sender: TObject);
   private
     FClienteController: iClienteController;
-    FFrameCidadesController: iFramePesquisaController<iCidadeDTO>;
-    FFormPesquisaCidade: TFrmCidades;
+    FFrameCidadesController: iFramePesquisaController;
+
   public
     { Public declarations }
   end;
@@ -43,7 +49,7 @@ implementation
 uses
   uClienteDTO,
   uControllerFactoryImpl,
-  uFramePesquisaControllerImpl;
+  uFramePesquisaCidadeControllerImpl;
 
 {$R *.dfm}
 
@@ -77,21 +83,21 @@ begin
 
 end;
 
+procedure TFrmCliente.Button2Click(Sender: TObject);
+begin
+  ShowMessage(TCidadeDTO(FFrameCidadesController.GetItemSelecionado).Nome );
+end;
+
 procedure TFrmCliente.FormCreate(Sender: TObject);
 begin
   FClienteController := TControllerFactoryImpl.New.GetClienteController;
-  FFormPesquisaCidade := TFrmCidades.Create(self);
-
-  FFrameCidadesController := TFramePesquisaControllerImpl<iCidadeDTO>
-    .New
-    .SetFormPesquisa(FFormPesquisaCidade);
-
+  FFrameCidadesController := TFramePesquisaCidadeControllerImpl.New;
   FrameCidades.SetController(FFrameCidadesController);
 end;
 
 procedure TFrmCliente.FormDestroy(Sender: TObject);
 begin
-  FFormPesquisaCidade.DisposeOf;
+  //
 end;
 
 end.
