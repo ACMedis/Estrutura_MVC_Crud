@@ -63,18 +63,20 @@ procedure TFrmCliente.Button1Click(Sender: TObject);
 var
   vCliente: iClienteDTO;
   vCidade: iCidadeDto;
+  vIdCidade: Integer;
 begin
   if (cmbTipoPessoa.ItemIndex = 0) then
     vCliente := TClienteDTO.NewFisica
   else
     vCliente := TClienteDTO.NewJuridica;
 
-  vCidade := TCidadeDTO.New.Id(1);
+  vIdCidade := TCidadeDTO(FFrameCidadesController.GetItemSelecionado).Id;
+  if (vIdCidade > 0) then
+    vCliente.Cidade(TCidadeDTO.New.Id(vIdCidade));
 
   vCliente
     .Nome(edtNome.Text)
-    .Documento(edtDocumento.Text)
-    .Cidade(vCidade);
+    .Documento(edtDocumento.Text);
 
   FClienteController
     .SalvarCliente(vCliente)
